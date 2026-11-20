@@ -8,16 +8,18 @@ OpenSim-next Viewer is a user-facing virtual-world client built on a mature Seco
 
 ## Repository responsibilities
 
-- [phoenix-firestorm](https://github.com/danggiatri6-spec/phoenix-firestorm) (to be created as a true GitHub fork): canonical Firestorm-derived Viewer source, OpenSim-next integration branches, build system, client UX, rendering evolution, performance, packaging, and release engineering.
+- [phoenix-firestorm](https://github.com/danggiatri6-spec/phoenix-firestorm): canonical Firestorm-derived Viewer source, OpenSim-next integration branches, build system, client UX, rendering evolution, performance, packaging, and release engineering.
 - This repository: integration plan, architecture decisions, build notes, upstream tracking, and project coordination.
 - [opensim-next](https://github.com/danggiatri6-spec/opensim-next): platform architecture, server-side work, Grid services, and cross-project planning.
 
 ## Upstream baseline
 
 - Upstream: [Firestorm Viewer](https://github.com/FirestormViewer/phoenix-firestorm)
-- Candidate baseline branch: `Firestorm_7.2.5`
-- Candidate commit: `4ac201fdc56127de27de34567286885f4e75d194`
-- Status: candidate pin for evaluation; not yet verified by a successful local build or Grid connection.
+- Baseline branch: `Firestorm_7.2.5`
+- Pinned commit: `4ac201fdc56127de27de34567286885f4e75d194`
+- Fork mirror branch: `Firestorm_7.2.5`
+- OpenSim-next working branch: `opensim-next/integration`
+- Status: GitHub fork and branches verified; no successful Windows build or Grid connection is claimed.
 
 ## Platform priority
 
@@ -40,8 +42,9 @@ Windows-first is a delivery priority, not a decision to make the architecture Wi
 
 ## Current status
 
-This repository was created as the dedicated viewer home. The Firestorm source tree has **not** yet been forked into your account. This repository is not a Firestorm fork. No successful Windows build or OpenSim Grid login is claimed.
+The true GitHub fork now exists at [danggiatri6-spec/phoenix-firestorm](https://github.com/danggiatri6-spec/phoenix-firestorm), with upstream parent [FirestormViewer/phoenix-firestorm](https://github.com/FirestormViewer/phoenix-firestorm). The pinned baseline and OpenSim-next integration branches have been created from the exact upstream commit listed above.
 
-See [docs/FORK_SETUP.md](docs/FORK_SETUP.md) for the exact fork procedure. The fork must be created through GitHub's Fork action.
+This is source-control setup only. No successful Windows build, runtime launch, or OpenSim Grid login is claimed.
 
+See [docs/FORK_SETUP.md](docs/FORK_SETUP.md) and [docs/BASELINE.md](docs/BASELINE.md) for source-control details.
 See [docs/INTEGRATION_PLAN.md](docs/INTEGRATION_PLAN.md) for the integration plan.
