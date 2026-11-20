@@ -1,0 +1,44 @@
+# OpenSim-next Viewer
+
+The dedicated PC Viewer repository for OpenSim-next.
+
+## Project direction
+
+OpenSim-next Viewer is a user-facing virtual-world client built on a mature Second Life / OpenSim viewer foundation. The initial integration strategy is **Firestorm-first**: preserve the upstream viewer's protocol, world synchronization, avatar, inventory, chat, building, and established client functionality, then evolve the product incrementally.
+
+## Repository responsibilities
+
+- This repository: PC Viewer source integration, build system, client UX, rendering evolution, performance, packaging, and release engineering.
+- [opensim-next](https://github.com/danggiatri6-spec/opensim-next): platform architecture, server-side work, Grid services, and cross-project planning.
+
+## Upstream baseline
+
+- Upstream: [Firestorm Viewer](https://github.com/FirestormViewer/phoenix-firestorm)
+- Candidate baseline branch: `Firestorm_7.2.5`
+- Candidate commit: `4ac201fdc56127de27de34567286885f4e75d194`
+- Status: candidate pin for evaluation; not yet verified by a successful local build or Grid connection.
+
+## Platform priority
+
+1. Windows 10/11 x64 — first-class initial platform.
+2. macOS — second phase after the Windows experience stabilizes.
+3. Linux — third phase; portability checks may run earlier.
+4. Android — later, as a separate lightweight client.
+
+Windows-first is a delivery priority, not a decision to make the architecture Windows-only.
+
+## Engineering principles
+
+- Keep the Firestorm upstream history and record the exact upstream commit for every integration baseline.
+- Prefer small, reviewable changes and preserve upstream mergeability.
+- Do not copy only `indra/newview`; the viewer depends on a large source tree, Autobuild configuration, generated files, and third-party dependencies.
+- Do not replace mature protocol or world features until the replacement has feature parity and regression coverage.
+- Keep the existing SDL3/OpenGL prototype as a separate technical experiment; it is not the production viewer foundation.
+- Avoid cloud GPU rendering in the initial product.
+- Support scalable quality settings so lower-end PCs can use core social and creation features.
+
+## Current status
+
+This repository was created as the dedicated viewer home. The Firestorm source tree has **not** yet been imported, and no successful Windows build or OpenSim Grid login is claimed.
+
+See [docs/INTEGRATION_PLAN.md](docs/INTEGRATION_PLAN.md) for the integration plan.
