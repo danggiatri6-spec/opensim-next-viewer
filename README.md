@@ -44,7 +44,9 @@ Windows-first is a delivery priority, not a decision to make the architecture Wi
 
 The true GitHub fork now exists at [danggiatri6-spec/phoenix-firestorm](https://github.com/danggiatri6-spec/phoenix-firestorm), with upstream parent [FirestormViewer/phoenix-firestorm](https://github.com/FirestormViewer/phoenix-firestorm). The pinned baseline and OpenSim-next integration branches have been created from the exact upstream commit listed above.
 
-This is source-control setup only. No successful Windows build, runtime launch, or OpenSim Grid login is claimed.
+The Windows build dependency audit is documented in [docs/BUILD_AUDIT.md](docs/BUILD_AUDIT.md). It is based on the pinned source's official build guide and CMake configuration.
 
-See [docs/FORK_SETUP.md](docs/FORK_SETUP.md) and [docs/BASELINE.md](docs/BASELINE.md) for source-control details.
+This is source-control and build preparation only. No successful Windows build, runtime launch, or OpenSim Grid login is claimed.
+
+See [docs/FORK_SETUP.md](docs/FORK_SETUP.md), [docs/BASELINE.md](docs/BASELINE.md), and [docs/BUILD_AUDIT.md](docs/BUILD_AUDIT.md) for setup details.
 See [docs/INTEGRATION_PLAN.md](docs/INTEGRATION_PLAN.md) for the integration plan.
