@@ -50,3 +50,8 @@ This is source-control and build preparation only. No successful Windows build, 
 
 See [docs/FORK_SETUP.md](docs/FORK_SETUP.md), [docs/BASELINE.md](docs/BASELINE.md), and [docs/BUILD_AUDIT.md](docs/BUILD_AUDIT.md) for setup details.
 See [docs/INTEGRATION_PLAN.md](docs/INTEGRATION_PLAN.md) for the integration plan.
+
+
+## Windows End-User Distribution
+
+See [Windows End-User Distribution Policy](docs/USER_DISTRIBUTION.md) for the zero-development-dependency installation requirements and release acceptance tests.
