@@ -19,7 +19,7 @@ These are build-time tools only and belong exclusively on CI/build runners.
 The first public test release should provide:
 
 1. **Windows installer**: a signed or clearly marked unsigned NSIS installer, containing the complete Viewer runtime, plugins, resources, and required redistributable runtime files.
-2. **Portable ZIP**: a complete unpacked Viewer distribution for users who prefer not to install.
+2. **Portable ZIP**: a complete unpacked Viewer distribution for users who prefer not to install. The CI workflow now creates this archive from the packaged runtime tree, excluding the installer subfolder.
 
 The installer is the primary distribution format. The portable ZIP is secondary and must be validated independently.
 
@@ -60,4 +60,4 @@ Before declaring a user-ready release:
 
 ## Current status
 
-The GitHub Actions workflow has been updated to request `--package`, install NSIS on the runner, and use the legacy NSIS route by setting `USE_VELOPACK=OFF`. The workflow run must still complete successfully, and the generated installer must pass clean-VM testing before this requirement can be marked complete.
+The first CI attempt reached CMake but failed because `--chan` was passed in the wrong position and was interpreted as a CMake argument. The workflow was corrected to follow Firestorm's documented form: `autobuild configure ... -- --package --chan OpenSimNext ...`. The current workflow also installs NSIS, disables Velopack for the unsigned first-build path, stages the complete manifest output, and creates a portable ZIP. The corrected run must still complete successfully, and both artifacts must pass clean-VM testing before this requirement can be marked complete.
